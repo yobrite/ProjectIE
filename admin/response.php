@@ -42,8 +42,8 @@
 		   // getting total number records without any search
 
 			$page = $params['page'] || 0;
-			$startRow = $page * 10;
-			$sql = "SELECT * FROM `customer` LIMIT ". strval($startRow) .", ". strval($startRow + 9) ;
+			$startRow = $page * 30;
+			$sql = "SELECT * FROM `customer` ORDER BY cID DESC LIMIT ". strval($startRow) .", ". strval($startRow + 29) ;
 
 			$queryRecords = mysqli_query($this->conn, $sql) or die("error to fetch customers data");
 

@@ -93,7 +93,12 @@
 	  </div>
 	</nav>
 
-	<div class="container">
+	<div class="container" style="margin-bottom:30px; margin-top:30px;">
+			<div class="row">
+				<div class="col-sm-3">
+					<button type="button" class="btn btn-info" onclick='addNewRecord()'>Add new record</button>
+				</div>
+			</div>
       <div class="row">
 				<h1></h1>
         <div class="col-sm-12">
@@ -104,6 +109,7 @@
 								<th>First Name</th>
 								<th>Last Name</th>
 								<th>Phone</th>
+								<th>User Name</th>
 								<th>Email</th>
 							</tr>
 						</thead>
@@ -112,11 +118,6 @@
 					</table>
 				</div>
       </div>
-			<div class="row">
-				<div class="col-sm-2 col-sm-offset-10">
-					<button type="button" class="btn btn-info" onclick='addNewRecord()'>Add new record</button>
-				</div>
-			</div>
     </div>
 </body>
 </html>
@@ -130,7 +131,7 @@ $( document ).ready(function() {
 		  success: function(response)
 		  {
 			for (var i = 0; i < response.length; i++) {
-				 $('#employee_grid').append("<tr><td>" + response[i].cID + "</td><td data-name='cFName' class='cFName' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].cFName + "</td><td data-name='cLName' class='cLName' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].cLName + "</td><td data-name='phoneNumber' class='phoneNumber' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].phoneNumber + "</td><td data-name='email' class='email' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].email + "</td></tr>");
+				 $('#employee_grid').append("<tr><td>" + response[i].cID + "</td><td data-name='cFName' class='cFName' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].cFName + "</td><td data-name='cLName' class='cLName' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].cLName + "</td><td data-name='phoneNumber' class='phoneNumber' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].phoneNumber + "</td><td data-name='userName' class='userName' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].userName + "</td><td data-name='email' class='email' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].email + "</td></tr>");
 			 }
 		  },
 		 error: function(jqXHR, textStatus, errorThrown) {
@@ -155,6 +156,7 @@ $( document ).ready(function() {
 	make_editable_col('#employee_grid','td.cFName','response.php?action=edit','Customer First Name');
 	make_editable_col('#employee_grid','td.cLName','response.php?action=edit','Last Name');
 	make_editable_col('#employee_grid','td.email','response.php?action=edit','Email');
+	make_editable_col('#employee_grid','td.userName','response.php?action=edit','User Name');
 	make_editable_col('#employee_grid','td.phoneNumber','response.php?action=edit','Phone Number');
 
 	function ajaxAction(action) {
@@ -230,7 +232,14 @@ function submitNewData(dialog) {
 			dialog.close();
       BootstrapDialog.show({
           title: 'Status',
-          message: 'Successfully'
+          message: 'Successfully',
+					buttons: [{
+            label: 'Close',
+            action: function(dialog) {
+              dialog.close();
+							location.reload();
+						}
+          }]
       });
 		},
 		 error: function(jqXHR, textStatus, errorThrown) {
