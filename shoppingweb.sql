@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2016 at 02:06 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.5.38
+-- Generation Time: Dec 13, 2017 at 07:05 PM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -316,26 +318,26 @@ CREATE TABLE `pp` (
 INSERT INTO `pp` (`productID`, `productName`, `productTypeID`, `productPrice`, `promotionID`, `shortDescription`, `longDescription`) VALUES
 (1, 'BaBylissPRO Nano Titanium Dryer', 5, 66465, 1, 'A stellar combination of power, speed and design offers both heavy-duty 2000-watt performance and lightweight ergonomic handling', NULL),
 (2, 'Bluetooth ver 4.0 Stereo Headphones With Microphone', 5, 910, 4, 'Colorful Design Multi-Function Stereo Sound Collapsible Wireless Bluetooth Headphones with Memory Card Support. ', NULL),
-(3, 'Columbia Men''s Watertight II Front-Zip Hooded Rain Jacket', 2, 2660, 3, 'Top-notch rain protection in an ultralight package-this packable rain jacket features full seam sealing', NULL),
+(3, 'Columbia Men\'s Watertight II Front-Zip Hooded Rain Jacket', 2, 2660, 3, 'Top-notch rain protection in an ultralight package-this packable rain jacket features full seam sealing', NULL),
 (4, 'Dell AW15R3-10881SLV Laptop', 5, 86450, 1, 'With the unstoppable mobility and awesomely intense graphics, the Alienware 15 gives you the power to take the game further than ever. ', NULL),
 (5, 'Emporio Armani Dress Watch', 3, 7875, 9, 'Black ion-plated stainless steel case with a black leather (interchangeable striped canvas) strap. Fixed black ion-plated bezel. Black dial with grey hands and index hour markers.', NULL),
 (6, 'Fizzics Revolutionary Beer System, One Size, Black and Silver', 5, 6965, 1, 'The Fizzics System is the world’s first portable Draft Beer System that improves the flavor and taste of ordinary canned, bottled and growler beer. ', NULL),
-(7, 'Herschel Supply Co. Men''s Roy Quilted Bifold Wallet', 2, 945, 6, 'The classic bi-fold quilted Roy wallet offers a currency sleeve, multiple card slots and additional storage with a distinctive diamond stitched exterior.', NULL),
+(7, 'Herschel Supply Co. Men\'s Roy Quilted Bifold Wallet', 2, 945, 6, 'The classic bi-fold quilted Roy wallet offers a currency sleeve, multiple card slots and additional storage with a distinctive diamond stitched exterior.', NULL),
 (8, 'Jan Marini Skin Research Holiday Exfoliator, Chocolate Truffle, 2 fl. oz', 3, 2450, 4, 'Uniquely designed microscopic particles gently exfoliate while releasing a skin protectant', NULL),
 (9, 'NETGEAR Nighthawk X10 – AD7200 802.11acad Quad-Stream MU-MIMO WiFi', 5, 17465, 4, 'The Nighthawk X10 AD7200 Smart WiFi Router is industry’s fastest router for media streaming with Plex media server. ', NULL),
 (10, 'Oral-B Black Pro 1000 Power Rechargeable Electric Toothbrush Powered by', 5, 2450, 10, 'Oral-b black 1000 rechargeable electric toothbrush provides a clinically proven superior clean vs a regular manual toothbrush. ', NULL),
 (11, 'Philips Norelco Electric Shaver 8900, Wet & Dry Edition S895091', 5, 3990, 8, 'This wet or dry electric shaver is designed to contour to the curves of your face and cut closer to the skin. ', NULL),
-(12, 'SUNVP Men''s Hats Warm Knitted Cap Technician Fine Gauge Beanie Warm Knitted Cap', 2, 1750, 3, 'Warm Knitted Cap Technician Fine Gauge Beanie Warm Knitted Cap\r\nComfort, Warmth & Style Guaranteed \r\n', NULL),
-(13, 'Tamarac by Slippers International Men''s Flynn Slippers', 2, 1400, 1, 'Men''s canoe moccasin-style slipper featuring cowsuede leather upper with whipstitched toe and soft berber lining.', NULL),
+(12, 'SUNVP Men\'s Hats Warm Knitted Cap Technician Fine Gauge Beanie Warm Knitted Cap', 2, 1750, 3, 'Warm Knitted Cap Technician Fine Gauge Beanie Warm Knitted Cap\r\nComfort, Warmth & Style Guaranteed \r\n', NULL),
+(13, 'Tamarac by Slippers International Men\'s Flynn Slippers', 2, 1400, 1, 'Men\'s canoe moccasin-style slipper featuring cowsuede leather upper with whipstitched toe and soft berber lining.', NULL),
 (14, 'Trimfit Boys Dragon Slippers Moccasin (ToddlerLittle KidBig Kid)', 3, 875, 12, 'Vibrant, comfortable 3d fire breathing dragon slipper by Trimfit, with elastic collar to ensure best possible fit. ', NULL),
 (15, 'Yuneec Typhoon H Pro with Intel RealSense Technology', 5, 45500, 9, 'The Typhoon H is an advanced aerial photography and videography platform. ', NULL),
 (16, 'Fluffy Bear Cat Paw Glove', 2, 110, 10, NULL, NULL),
-(17, 'Men''s hoodie tracksuit', 2, 630, 3, NULL, NULL),
+(17, 'Men\'s hoodie tracksuit', 2, 630, 3, NULL, NULL),
 (18, 'Vintage long sleeve flower floral black dress', 2, 1015, 4, NULL, NULL),
 (19, 'Arbitmatch Female Warm Winter jacker women', 2, 1820, 5, NULL, NULL),
 (20, 'Deep V Neck Dress Women Pleats Split', 2, 850, 1, NULL, NULL),
 (21, 'Biker jeans destory', 2, 1680, 6, NULL, NULL),
-(22, 'Women heans ripped girl''s Plus', 2, 1050, 7, NULL, NULL),
+(22, 'Women heans ripped girl\'s Plus', 2, 1050, 7, NULL, NULL),
 (23, 'Yoga set women long sleeves shirt and ankle length slim', 2, 2240, 10, NULL, NULL),
 (24, 'PCS Kawaii Icon Acrylic pin Badge Cartoon', 3, 30, 1, NULL, NULL),
 (25, 'Stainless bracelet male', 3, 900, 7, NULL, NULL),
@@ -351,7 +353,7 @@ INSERT INTO `pp` (`productID`, `productName`, `productTypeID`, `productPrice`, `
 (35, 'Double Down (Diary of a Wimpy Kid #11)', 4, 420, 10, NULL, NULL),
 (36, 'Fundamentals of Database Systems (7th Edition)', 4, 5670, 1, NULL, NULL),
 (37, 'Ghost (Track)', 4, 350, 9, NULL, NULL),
-(38, 'Gordon Ramsay''s Home Cooking Everything You Need to Know to Make Fabulous Food', 4, 1225, 4, NULL, NULL),
+(38, 'Gordon Ramsay\'s Home Cooking Everything You Need to Know to Make Fabulous Food', 4, 1225, 4, NULL, NULL),
 (39, 'Fantastic Beasts and Where to Find Them The Original Screenplay', 4, 525, 3, NULL, NULL),
 (40, 'Life of Pi', 4, 315, 2, NULL, NULL),
 (41, 'Steve Jobs', 4, 420, 8, NULL, NULL),
@@ -423,96 +425,98 @@ CREATE TABLE `product` (
   `productName` varchar(100) NOT NULL,
   `productTypeID` int(10) NOT NULL,
   `productPrice` float NOT NULL,
-  `promotionID` int(10) DEFAULT NULL
+  `promotionID` int(10) DEFAULT NULL,
+  `shortDescription` varchar(500) NOT NULL,
+  `longDescription` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`productID`, `productName`, `productTypeID`, `productPrice`, `promotionID`) VALUES
-(1, 'Wholesale Price Cat House and Pet Bed', 9, 400, 1),
-(6, 'Asiatique Brown Fish', 1, 129, NULL),
-(7, 'Buddhi Belly', 1, 170, NULL),
-(8, 'Coffee World', 1, 145, NULL),
-(9, 'Hot Pot Buffet', 1, 319, NULL),
-(10, 'Kanemochi Cafe', 1, 165, NULL),
-(11, 'PizzaCompany Lunch', 1, 200, NULL),
-(12, 'PizzaHut Seafood', 1, 398, NULL),
-(13, ' Squeeze', 1, 105, NULL),
-(14, 'Superb Saturday Buffet', 1, 691, NULL),
-(15, 'Buffet @Majestic Grande Hotel', 1, 800, NULL),
-(16, 'Fluffy Bear Cat Paw Glove', 2, 110, NULL),
-(17, 'Men''s hoodie tracksuit', 2, 630, NULL),
-(18, 'Vintage long sleeve flower floral black dress', 2, 1015, NULL),
-(19, 'Arbitmatch Female Warm Winter jacker women', 2, 1820, NULL),
-(20, 'Deep V Neck Dress Women Pleats Split', 2, 850, NULL),
-(21, 'Biker jeans destory', 2, 1680, NULL),
-(22, 'Women heans ripped girl''s Plus', 2, 1050, NULL),
-(23, 'Yoga set women long sleeves shirt and ankle length slim', 2, 2240, NULL),
-(24, 'PCS Kawaii Icon Acrylic pin Badge Cartoon', 3, 30, NULL),
-(25, 'Stainless bracelet male', 3, 900, NULL),
-(26, 'Drop ship The One Ring All seeing Eyes', 3, 210, NULL),
-(27, 'Sterling Silver Queen Elsa Ring', 3, 1400, NULL),
-(28, 'Hot Beanie Snowboard Winter hats', 3, 750, NULL),
-(29, 'KOTTDO Reading eyeglasses', 3, 170, NULL),
-(30, 'Mens watches Automatic mechanical watch tourbillo brand LIGE', 3, 4195, NULL),
-(31, 'Retro Bracelets 40cm Leather Bracelet Men', 3, 435, NULL),
-(32, 'Pendant Amethyst magic cube necklace', 3, 1750, NULL),
-(33, 'Pearl Earings brincos 18k Gold Plated Earrings For Women', 3, 190, NULL),
-(34, 'Database Systems A Practical Approach to Design, Implementation, and Management (6th Edition)', 4, 6160, NULL),
-(35, 'Double Down (Diary of a Wimpy Kid #11)', 4, 420, NULL),
-(36, 'Fundamentals of Database Systems (7th Edition)', 4, 5670, NULL),
-(37, 'Ghost (Track)', 4, 350, NULL),
-(38, 'Gordon Ramsay''s Home Cooking Everything You Need to Know to Make Fabulous Food', 4, 1225, NULL),
-(39, 'Fantastic Beasts and Where to Find Them The Original Screenplay', 4, 525, NULL),
-(40, 'Life of Pi', 4, 315, NULL),
-(41, 'Steve Jobs', 4, 420, NULL),
-(42, 'The Bourne Identity A Novel (Jason Bourne)', 4, 315, NULL),
-(43, 'The Sun Is Also a Star', 4, 400, NULL),
-(44, 'The Throwback Special A Novel', 4, 875, NULL),
-(45, 'Trump The Art of the Deal', 4, 560, NULL),
-(46, 'Joypad Gamepad Controller For Microsoft for Xbox Slim 360 for PC for Windows7', 5, 490, NULL),
-(47, 'AUKEY Quick Charge 2 0 USB Wall Charger 3 Port Smart Fast Turbo Mobile Charger', 5, 1155, NULL),
-(48, 'Beats Solo2 On-Ear Headphones', 5, 7000, NULL),
-(49, 'BlitzWolf VR 3D VR Glasses Box Virtual Reality Headset', 5, 1295, NULL),
-(50, 'iPhone Cable IOS 10 9 USAMS 2 1A Fast Charging 1m 1 5m Flat', 5, 175, NULL),
-(51, 'Waterproof Metal USB Flash Drives 32GB', 5, 600, NULL),
-(52, 'LG Electronics 55LH5750 55 Inch 1080p Smart LED TV (2016 Model)', 5, 17500, NULL),
-(53, 'LD Micro SD Card 32GB Class 10', 5, 1400, NULL),
-(54, 'Mpow Magnetic Earphone 1 Headset Wireless Headphone Sport', 5, 945, NULL),
-(55, 'Xiaomi Mi Band 2 MiBand 2 Wristband ', 5, 1190, NULL),
-(56, 'Professional Wired Gaming Mouse 7 Button 5500 DPI LED Optical USB Gamer Computer Mouse Mice Cable', 5, 350, NULL),
-(57, 'Laser facial packages @ SUMOM Clinic', 6, 9500, NULL),
-(58, 'Too Coo For School Promotion EGG MOUSSE PACK', 6, 1050, NULL),
-(59, 'Watsons Winter Buffet Nov 2016', 6, 1000, NULL),
-(60, 'Mei linda cosmetics', 6, 1000, NULL),
-(61, 'Massage Spa @ Embassy', 6, 259, NULL),
-(62, 'Botox @ Tharatorn Medical Clinic', 6, 8500, NULL),
-(63, 'Supreme cosmetics', 6, 1000, NULL),
-(64, 'Gold Mask @ Doctorgrich Clinic', 6, 30000, NULL),
-(65, 'Lifitng Package @ Avarah Innovation Clinic', 6, 30000, NULL),
-(66, 'Ireland Vacation with Airfare and Car Rental ', 8, 38500, NULL),
-(67, 'Italy Vacation with Airfare from Gate 1 Travel - Venice, Florence, and Rome', 8, 38500, NULL),
-(68, 'Jake Jump Family Pack @ Cartoon Network Amazone Pattaya', 8, 5529, NULL),
-(69, 'South Korea Cheap Flight!!!', 8, 8488, NULL),
-(70, 'Pheasant Run Resort - St. Charles, IL', 8, 2415, NULL),
-(71, 'BKK-IRL Cheap Flight', 8, 17400, NULL),
-(72, 'Banana Beach (One Day Trip)@ Phuket Colorful Trip', 8, 2200, NULL),
-(73, '48 years Bangkok Airway promotion', 8, 1000, NULL),
-(74, 'Tour 3 day 2 night with Hidayah Grand Krabi', 8, 12000, NULL),
-(75, '2 day 1 night @ Lotus Villas & Resort Hua Hin', 8, 8455, NULL),
-(76, '4 Tickets from SFW,SFX and SFC', 9, 800, NULL),
-(77, 'One Month Unlimited Pass at Webster Place Athletic Club', 7, 4025, NULL),
-(78, 'Five Drop-In Fitness Classes or One Month of Unlimited Classes at MaZi Dance Fitness Centre', 7, 3325, NULL),
-(79, 'Lift Ticket with Optional Equipment Rental or a Beginner Package or Tubing at Cascade Mountain', 7, 3465, NULL),
-(80, 'One Week of Unlimited Bikram Yoga Classes or 5 Bikram Yoga Classes at Bikram Yoga River North', 7, 2625, NULL),
-(81, 'Five Saturday Dance-Fitness Classes at Zumba With Jan', 7, 1575, NULL),
-(82, 'High-Intensity Fitness Classes at Fit-Results', 7, 4550, NULL),
-(83, 'Teeth-Whitening Treatment at Smiling Bright', 7, 10500, NULL),
-(84, 'One, Three, or Five Whole-Body Cryotherapy Sessions at Advanced Cryotherapy and Fitness', 7, 12250, NULL),
-(85, 'Reflexology and Foot Massage at Healthy Zu Spa foot massage and relaxation retreat ', 7, 2065, NULL),
-(86, 'Kickboxing Classes at StrikeForce Fitness', 7, 8750, NULL);
+INSERT INTO `product` (`productID`, `productName`, `productTypeID`, `productPrice`, `promotionID`, `shortDescription`, `longDescription`) VALUES
+(1, 'Wholesale Price Cat House and Pet Bed', 9, 400, 1, '', ''),
+(6, 'Asiatique Brown Fish', 1, 129, NULL, '', ''),
+(7, 'Buddhi Belly', 1, 170, NULL, '', ''),
+(8, 'Coffee World', 1, 145, NULL, '', ''),
+(9, 'Hot Pot Buffet', 1, 319, NULL, '', ''),
+(10, 'Kanemochi Cafe', 1, 165, NULL, '', ''),
+(11, 'PizzaCompany Lunch', 1, 200, NULL, '', ''),
+(12, 'PizzaHut Seafood', 1, 398, NULL, '', ''),
+(13, ' Squeeze', 1, 105, NULL, '', ''),
+(14, 'Superb Saturday Buffet', 1, 691, NULL, '', ''),
+(15, 'Buffet @Majestic Grande Hotel', 1, 800, NULL, '', ''),
+(16, 'Fluffy Bear Cat Paw Glove', 2, 110, NULL, '', ''),
+(17, 'Men\'s hoodie tracksuit', 2, 630, NULL, '', ''),
+(18, 'Vintage long sleeve flower floral black dress', 2, 1015, NULL, '', ''),
+(19, 'Arbitmatch Female Warm Winter jacker women', 2, 1820, NULL, '', ''),
+(20, 'Deep V Neck Dress Women Pleats Split', 2, 850, NULL, '', ''),
+(21, 'Biker jeans destory', 2, 1680, NULL, '', ''),
+(22, 'Women heans ripped girl\'s Plus', 2, 1050, NULL, '', ''),
+(23, 'Yoga set women long sleeves shirt and ankle length slim', 2, 2240, NULL, '', ''),
+(24, 'PCS Kawaii Icon Acrylic pin Badge Cartoon', 3, 30, NULL, '', ''),
+(25, 'Stainless bracelet male', 3, 900, NULL, '', ''),
+(26, 'Drop ship The One Ring All seeing Eyes', 3, 210, NULL, '', ''),
+(27, 'Sterling Silver Queen Elsa Ring', 3, 1400, NULL, '', ''),
+(28, 'Hot Beanie Snowboard Winter hats', 3, 750, NULL, '', ''),
+(29, 'KOTTDO Reading eyeglasses', 3, 170, NULL, '', ''),
+(30, 'Mens watches Automatic mechanical watch tourbillo brand LIGE', 3, 4195, NULL, '', ''),
+(31, 'Retro Bracelets 40cm Leather Bracelet Men', 3, 435, NULL, '', ''),
+(32, 'Pendant Amethyst magic cube necklace', 3, 1750, NULL, '', ''),
+(33, 'Pearl Earings brincos 18k Gold Plated Earrings For Women', 3, 190, NULL, '', ''),
+(34, 'Database Systems A Practical Approach to Design, Implementation, and Management (6th Edition)', 4, 6160, NULL, '', ''),
+(35, 'Double Down (Diary of a Wimpy Kid #11)', 4, 420, NULL, '', ''),
+(36, 'Fundamentals of Database Systems (7th Edition)', 4, 5670, NULL, '', ''),
+(37, 'Ghost (Track)', 4, 350, NULL, '', ''),
+(38, 'Gordon Ramsay\'s Home Cooking Everything You Need to Know to Make Fabulous Food', 4, 1225, NULL, '', ''),
+(39, 'Fantastic Beasts and Where to Find Them The Original Screenplay', 4, 525, NULL, '', ''),
+(40, 'Life of Pi', 4, 315, NULL, '', ''),
+(41, 'Steve Jobs', 4, 420, NULL, '', ''),
+(42, 'The Bourne Identity A Novel (Jason Bourne)', 4, 315, NULL, '', ''),
+(43, 'The Sun Is Also a Star', 4, 400, NULL, '', ''),
+(44, 'The Throwback Special A Novel', 4, 875, NULL, '', ''),
+(45, 'Trump The Art of the Deal', 4, 560, NULL, '', ''),
+(46, 'Joypad Gamepad Controller For Microsoft for Xbox Slim 360 for PC for Windows7', 5, 490, NULL, '', ''),
+(47, 'AUKEY Quick Charge 2 0 USB Wall Charger 3 Port Smart Fast Turbo Mobile Charger', 5, 1155, NULL, '', ''),
+(48, 'Beats Solo2 On-Ear Headphones', 5, 7000, NULL, '', ''),
+(49, 'BlitzWolf VR 3D VR Glasses Box Virtual Reality Headset', 5, 1295, NULL, '', ''),
+(50, 'iPhone Cable IOS 10 9 USAMS 2 1A Fast Charging 1m 1 5m Flat', 5, 175, NULL, '', ''),
+(51, 'Waterproof Metal USB Flash Drives 32GB', 5, 600, NULL, '', ''),
+(52, 'LG Electronics 55LH5750 55 Inch 1080p Smart LED TV (2016 Model)', 5, 17500, NULL, '', ''),
+(53, 'LD Micro SD Card 32GB Class 10', 5, 1400, NULL, '', ''),
+(54, 'Mpow Magnetic Earphone 1 Headset Wireless Headphone Sport', 5, 945, NULL, '', ''),
+(55, 'Xiaomi Mi Band 2 MiBand 2 Wristband ', 5, 1190, NULL, '', ''),
+(56, 'Professional Wired Gaming Mouse 7 Button 5500 DPI LED Optical USB Gamer Computer Mouse Mice Cable', 5, 350, NULL, '', ''),
+(57, 'Laser facial packages @ SUMOM Clinic', 6, 9500, NULL, '', ''),
+(58, 'Too Coo For School Promotion EGG MOUSSE PACK', 6, 1050, NULL, '', ''),
+(59, 'Watsons Winter Buffet Nov 2016', 6, 1000, NULL, '', ''),
+(60, 'Mei linda cosmetics', 6, 1000, NULL, '', ''),
+(61, 'Massage Spa @ Embassy', 6, 259, NULL, '', ''),
+(62, 'Botox @ Tharatorn Medical Clinic', 6, 8500, NULL, '', ''),
+(63, 'Supreme cosmetics', 6, 1000, NULL, '', ''),
+(64, 'Gold Mask @ Doctorgrich Clinic', 6, 30000, NULL, '', ''),
+(65, 'Lifitng Package @ Avarah Innovation Clinic', 6, 30000, NULL, '', ''),
+(66, 'Ireland Vacation with Airfare and Car Rental ', 8, 38500, NULL, '', ''),
+(67, 'Italy Vacation with Airfare from Gate 1 Travel - Venice, Florence, and Rome', 8, 38500, NULL, '', ''),
+(68, 'Jake Jump Family Pack @ Cartoon Network Amazone Pattaya', 8, 5529, NULL, '', ''),
+(69, 'South Korea Cheap Flight!!!', 8, 8488, NULL, '', ''),
+(70, 'Pheasant Run Resort - St. Charles, IL', 8, 2415, NULL, '', ''),
+(71, 'BKK-IRL Cheap Flight', 8, 17400, NULL, '', ''),
+(72, 'Banana Beach (One Day Trip)@ Phuket Colorful Trip', 8, 2200, NULL, '', ''),
+(73, '48 years Bangkok Airway promotion', 8, 1000, NULL, '', ''),
+(74, 'Tour 3 day 2 night with Hidayah Grand Krabi', 8, 12000, NULL, '', ''),
+(75, '2 day 1 night @ Lotus Villas & Resort Hua Hin', 8, 8455, NULL, '', ''),
+(76, '4 Tickets from SFW,SFX and SFC', 9, 800, NULL, '', ''),
+(77, 'One Month Unlimited Pass at Webster Place Athletic Club', 7, 4025, NULL, '', ''),
+(78, 'Five Drop-In Fitness Classes or One Month of Unlimited Classes at MaZi Dance Fitness Centre', 7, 3325, NULL, '', ''),
+(79, 'Lift Ticket with Optional Equipment Rental or a Beginner Package or Tubing at Cascade Mountain', 7, 3465, NULL, '', ''),
+(80, 'One Week of Unlimited Bikram Yoga Classes or 5 Bikram Yoga Classes at Bikram Yoga River North', 7, 2625, NULL, '', ''),
+(81, 'Five Saturday Dance-Fitness Classes at Zumba With Jan', 7, 1575, NULL, '', ''),
+(82, 'High-Intensity Fitness Classes at Fit-Results', 7, 4550, NULL, '', ''),
+(83, 'Teeth-Whitening Treatment at Smiling Bright', 7, 10500, NULL, '', ''),
+(84, 'One, Three, or Five Whole-Body Cryotherapy Sessions at Advanced Cryotherapy and Fitness', 7, 12250, NULL, '', ''),
+(85, 'Reflexology and Foot Massage at Healthy Zu Spa foot massage and relaxation retreat ', 7, 2065, NULL, '', ''),
+(86, 'Kickboxing Classes at StrikeForce Fitness', 7, 8750, NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -577,17 +581,17 @@ CREATE TABLE `productz` (
 INSERT INTO `productz` (`productID`, `productName`, `productTypeID`, `productPrice`, `promotionID`, `shortDescription`, `longDescription`) VALUES
 (1, 'BaBylissPRO Nano Titanium Dryer', 5, 66465, NULL, 'A stellar combination of power, speed and design offers both heavy-duty 2000-watt performance and lightweight ergonomic handling', NULL),
 (2, 'Bluetooth ver 4.0 Stereo Headphones With Microphone', 5, 910, NULL, 'Colorful Design Multi-Function Stereo Sound Collapsible Wireless Bluetooth Headphones with Memory Card Support. ', NULL),
-(3, 'Columbia Men''s Watertight II Front-Zip Hooded Rain Jacket', 2, 2660, NULL, 'Top-notch rain protection in an ultralight package-this packable rain jacket features full seam sealing', NULL),
+(3, 'Columbia Men\'s Watertight II Front-Zip Hooded Rain Jacket', 2, 2660, NULL, 'Top-notch rain protection in an ultralight package-this packable rain jacket features full seam sealing', NULL),
 (4, 'Dell AW15R3-10881SLV Laptop', 5, 86450, NULL, 'With the unstoppable mobility and awesomely intense graphics, the Alienware 15 gives you the power to take the game further than ever. ', NULL),
 (5, 'Emporio Armani Dress Watch', 3, 7875, NULL, 'Black ion-plated stainless steel case with a black leather (interchangeable striped canvas) strap. Fixed black ion-plated bezel. Black dial with grey hands and index hour markers.', NULL),
 (6, 'Fizzics Revolutionary Beer System, One Size, Black and Silver', 5, 6965, NULL, 'The Fizzics System is the world’s first portable Draft Beer System that improves the flavor and taste of ordinary canned, bottled and growler beer. ', NULL),
-(7, 'Herschel Supply Co. Men''s Roy Quilted Bifold Wallet', 2, 945, NULL, 'The classic bi-fold quilted Roy wallet offers a currency sleeve, multiple card slots and additional storage with a distinctive diamond stitched exterior.', NULL),
+(7, 'Herschel Supply Co. Men\'s Roy Quilted Bifold Wallet', 2, 945, NULL, 'The classic bi-fold quilted Roy wallet offers a currency sleeve, multiple card slots and additional storage with a distinctive diamond stitched exterior.', NULL),
 (8, 'Jan Marini Skin Research Holiday Exfoliator, Chocolate Truffle, 2 fl. oz', 3, 2450, NULL, 'Uniquely designed microscopic particles gently exfoliate while releasing a skin protectant', NULL),
 (9, 'NETGEAR Nighthawk X10 – AD7200 802.11acad Quad-Stream MU-MIMO WiFi', 5, 17465, NULL, 'The Nighthawk X10 AD7200 Smart WiFi Router is industry’s fastest router for media streaming with Plex media server. ', NULL),
 (10, 'Oral-B Black Pro 1000 Power Rechargeable Electric Toothbrush Powered by', 5, 2450, NULL, 'Oral-b black 1000 rechargeable electric toothbrush provides a clinically proven superior clean vs a regular manual toothbrush. ', NULL),
 (11, 'Philips Norelco Electric Shaver 8900, Wet & Dry Edition S895091', 5, 3990, NULL, 'This wet or dry electric shaver is designed to contour to the curves of your face and cut closer to the skin. ', NULL),
-(12, 'SUNVP Men''s Hats Warm Knitted Cap Technician Fine Gauge Beanie Warm Knitted Cap', 2, 1750, NULL, 'Warm Knitted Cap Technician Fine Gauge Beanie Warm Knitted Cap\r\nComfort, Warmth & Style Guaranteed \r\n', NULL),
-(13, 'Tamarac by Slippers International Men''s Flynn Slippers', 2, 1400, NULL, 'Men''s canoe moccasin-style slipper featuring cowsuede leather upper with whipstitched toe and soft berber lining.', NULL),
+(12, 'SUNVP Men\'s Hats Warm Knitted Cap Technician Fine Gauge Beanie Warm Knitted Cap', 2, 1750, NULL, 'Warm Knitted Cap Technician Fine Gauge Beanie Warm Knitted Cap\r\nComfort, Warmth & Style Guaranteed \r\n', NULL),
+(13, 'Tamarac by Slippers International Men\'s Flynn Slippers', 2, 1400, NULL, 'Men\'s canoe moccasin-style slipper featuring cowsuede leather upper with whipstitched toe and soft berber lining.', NULL),
 (14, 'Trimfit Boys Dragon Slippers Moccasin (ToddlerLittle KidBig Kid)', 3, 875, NULL, 'Vibrant, comfortable 3d fire breathing dragon slipper by Trimfit, with elastic collar to ensure best possible fit. ', NULL),
 (15, 'Yuneec Typhoon H Pro with Intel RealSense Technology', 5, 45500, NULL, 'The Typhoon H is an advanced aerial photography and videography platform. ', NULL);
 
@@ -599,7 +603,7 @@ INSERT INTO `productz` (`productID`, `productName`, `productTypeID`, `productPri
 
 CREATE TABLE `promotion` (
   `promotionID` int(10) NOT NULL,
-  `percentDicount` decimal(10,2) DEFAULT NULL,
+  `percentDiscount` decimal(10,2) DEFAULT NULL,
   `startDate` date NOT NULL,
   `endDate` date NOT NULL,
   `promotionName` varchar(100) DEFAULT NULL
@@ -609,7 +613,7 @@ CREATE TABLE `promotion` (
 -- Dumping data for table `promotion`
 --
 
-INSERT INTO `promotion` (`promotionID`, `percentDicount`, `startDate`, `endDate`, `promotionName`) VALUES
+INSERT INTO `promotion` (`promotionID`, `percentDiscount`, `startDate`, `endDate`, `promotionName`) VALUES
 (1, '5.00', '2016-11-11', '2017-11-12', '5% Discount'),
 (2, '10.00', '2016-11-23', '2017-11-24', '10% Discount'),
 (3, '15.00', '2016-11-23', '2017-11-24', '15% Discount'),
@@ -674,6 +678,13 @@ CREATE TABLE `shoppingcart` (
   `amount` int(10) NOT NULL,
   `isActive` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `shoppingcart`
+--
+
+INSERT INTO `shoppingcart` (`cartID`, `cID`, `productID`, `amount`, `isActive`) VALUES
+(2, 1, 1, 1, '');
 
 --
 -- Indexes for dumped tables
@@ -778,76 +789,92 @@ ALTER TABLE `shoppingcart`
 --
 ALTER TABLE `address`
   MODIFY `addressID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
   MODIFY `cID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
   MODIFY `orderID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
 --
 -- AUTO_INCREMENT for table `orderstatus`
 --
 ALTER TABLE `orderstatus`
   MODIFY `orderStatusType` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
   MODIFY `paymentID` int(10) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `paymentmethod`
 --
 ALTER TABLE `paymentmethod`
   MODIFY `paymentMethodID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `pp`
 --
 ALTER TABLE `pp`
   MODIFY `productID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `productID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+
 --
 -- AUTO_INCREMENT for table `productorder`
 --
 ALTER TABLE `productorder`
   MODIFY `productOrderID` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `producttype`
 --
 ALTER TABLE `producttype`
   MODIFY `productTypeID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT for table `productz`
 --
 ALTER TABLE `productz`
   MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
 --
 -- AUTO_INCREMENT for table `promotion`
 --
 ALTER TABLE `promotion`
   MODIFY `promotionID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `shipping`
 --
 ALTER TABLE `shipping`
   MODIFY `shippingID` int(10) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `shippingmethod`
 --
 ALTER TABLE `shippingmethod`
   MODIFY `shippingMethodID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `shoppingcart`
 --
 ALTER TABLE `shoppingcart`
-  MODIFY `cartID` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `cartID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
