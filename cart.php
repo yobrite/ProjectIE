@@ -14,7 +14,7 @@ if(isset($_GET['del']))
    header('Location: cart.php');
   }
 
-  if(isset($_GET['add-cart']))
+if(isset($_GET['add-cart']))
   {
     $add =$_GET['add-cart'];
     $amount = $_GET['amount'];
@@ -220,16 +220,16 @@ if(isset($_GET['del']))
                           <input type="text" class="form-control" placeholder="CCV" name="CCV" id="CCV">
                         </span></p>
                         <p>
-                        <button type="button" class="btn btn-success" onClick="location.href='success.php'"> <span class="glyphicon glyphicon-shopping-cart"> Checkout</span> 
+                        <button type="button" class="btn btn-success" onClick="location.href='success.php'"> <span class="glyphicon glyphicon-shopping-cart"> Checkout</span>
 
 
 
-                        
+
                          </button>
 
                           <script>
-						  
-						  INSERT 
+
+						  INSERT
 
 }
                   </script>
@@ -244,10 +244,10 @@ if(isset($_GET['del']))
           <img src="credit.png" width="889" height="233"></div>
       </div>
   </div>
-  
-  
-  
-  
+
+
+
+
 <span class="glyphicon glyphicon-play"></span>
 
 
@@ -265,4 +265,3 @@ if(confirm("Are you sure you want to delete this row?")==true)
 </html>
 
 <!-- your account line 112 / search engine อยู่line 85-110 -->
-
