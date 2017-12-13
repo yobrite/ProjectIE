@@ -177,7 +177,7 @@ for($i=1; $i<13; $i++){
               <li role="separator" class="divider"></li>
               <li><a href="#">Electronics & Computers</a></li>
             </ul>
-          </div> 
+          </div>
           <input type="email" class="form-control" id="email" placeholder="Search for..."/>
           <span class="input-group-btn ">
           <button class="btn btn-success" type="button"><span class="glyphicon glyphicon-search"></span> Search!</button>
@@ -193,6 +193,22 @@ for($i=1; $i<13; $i++){
   </div>
 </nav>
 
+<?php
+  if (isset($_GET['is_login_fresh'])) {
+    $is_login_fresh=$_GET['is_login_fresh'];
+    if ($is_login_fresh) {
+      echo '<div class="container text-center">
+      <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+      <div class="alert alert-success" role="alert">
+      <strong>Successfully!</strong> ,welcome.
+      </div>
+      </div>
+      </div>
+      </div>';
+    }
+  }
+?>
 
 <div class="container">
   <div class="row">
@@ -271,7 +287,7 @@ for($i=1; $i<13; $i++){
           <div class="bottom">
           <h4><?php echo $price[0] ." Baht"?></h4>
           <button class="btn btn-black" type="submit" onclick= <?php echo '"location.href =\'productDetail.php?view-productID='.$val[0].'\'"' ?>;><span class="glyphicon glyphicon-search"></span> View More...</button>
-          
+
           </div>
 
         </div>

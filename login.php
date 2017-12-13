@@ -151,7 +151,7 @@ require_once('connection.php');
                   </script>
    <br>
 
-	
+
 
   </div>
   </div>
@@ -196,6 +196,7 @@ require_once('connection.php');
         $_SESSION['customerUsername'] = $row['userName'];
         $_SESSION['customerPhoneNum'] = $row['phoneNumber'];
         $_SESSION['customerEmail'] = $row['email'];
+        echo("<script>location.href = 'index.php?is_login_fresh=true';</script>");
       }
       else{
         echo '<div class="container text-center">

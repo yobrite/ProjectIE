@@ -1,10 +1,10 @@
 <?php
 $servername = "127.0.0.1";
-$username = "2017_fg9";
-$password = "2017_fg9";
+$username = "root";
+$password = "";
 
 // Create connection
-$mysqli = new mysqli($servername, $username, $password,'2017_fg9_project');
+$mysqli = new mysqli($servername, $username, $password,'shoppingweb');
 
 // Check connection
 if ($mysqli->connect_error){
