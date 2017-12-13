@@ -58,25 +58,23 @@
 			$sql = "Update `customer` set ".$params["name"]." = '" . $params["value"] . "' WHERE cID='".$params["pk"]."'";
 
 			if($result = mysqli_query($this->conn, $sql)) {
-				echo 'Successfully! Record updated...';
+				echo json_encode('{ "status": "success" }');
 			} else {
 				die("error to update '".$params["name"]."' with '".$params["value"]."'");
 			}
 		}
 
-		function reduceDataToSet($cout, $item) {
-			return $cout . $item["name"] . " = '" . $item["value"] . "' ";
-		}
-
-		function newEmployee($params) {
+		function addEmployee($params) {
+			function reduceDataToSet($cout, $item) {
+				return $cout . $item["name"] . " = '" . $item["value"] . "', ";
+			}
 			$data = array();
 			$data = $params["data"];
 			$data_text = array_reduce($data, "reduceDataToSet", 'Insert into `customer` set ');
-			$sql = substr($data_text, 0, strlen($data_text) - 1);
-			echo $sql;
+			$sql = substr($data_text, 0, strlen($data_text) - 2);
 
 			if($result = mysqli_query($this->conn, $sql)) {
-				echo 'Successfully! Record added...';
+				echo json_encode('{ "status": "success" }');
 			} else {
 				die("error to add: ".$data." , with sql: ". $sql);
 			}

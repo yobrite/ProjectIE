@@ -8,7 +8,15 @@
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.5/css/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.5/js/bootstrap-dialog.min.js"></script>
 	<style>
+	br {
+    display: none;
+	}
+	.modal-dialog {
+    width: 800px!important;
+	}
 	.navbar {
 		margin-bottom: 0px;
 		border-radius: 0;
@@ -61,7 +69,7 @@
 			padding-top: 150px;
 		}
 		h1{
-			color: white;
+			/* color: black; */
 		}
 	</style>
 </head>
@@ -75,34 +83,40 @@
 	      <a class="navbar-brand" href="#">Admin Console</a>
 	    </div>
 	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="#">Customer</a></li>
-				<li><a href="#">Product</a></li>
-	      <li><a href="#">Order List</a></li>
+	      <li class="active"><a href="./index.php">Customer</a></li>
+				<li><a href="./product.php">Product</a></li>
+	      <li><a href="./order.php">Order List</a></li>
 	    </ul>
 	    <ul class="nav navbar-nav navbar-right">
-	      <li><a href="./logout.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	      <li><a href="./logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
 	    </ul>
 	  </div>
 	</nav>
 
 	<div class="container">
-      <div class="">
-        <h1>Admin Console</h1>
+      <div class="row">
+				<h1></h1>
         <div class="col-sm-12">
-			<table class="table table-condensed table-hover table-striped" width="60%" cellspacing="0">
-				<thead>
-					<tr>
-						<th style='width:60px;'>ID</th>
-						<th>First Name</th>
-						<th>Phone</th>
-						<th>Email</th>
-					</tr>
-				</thead>
-				<tbody id="employee_grid">
-				</tbody>
-			</table>
-		</div>
+					<table class="table table-condensed table-hover table-striped" width="60%" cellspacing="0">
+						<thead>
+							<tr>
+								<th style='width:60px;'>ID</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Phone</th>
+								<th>Email</th>
+							</tr>
+						</thead>
+						<tbody id="employee_grid">
+						</tbody>
+					</table>
+				</div>
       </div>
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-10">
+					<button type="button" class="btn btn-info" onclick='addNewRecord()'>Add new record</button>
+				</div>
+			</div>
     </div>
 </body>
 </html>
@@ -116,7 +130,7 @@ $( document ).ready(function() {
 		  success: function(response)
 		  {
 			for (var i = 0; i < response.length; i++) {
-				 $('#employee_grid').append("<tr><td>" + response[i].cID + "</td><td data-name='cFName' class='cFName' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].cFName + "</td><td data-name='phoneNumber' class='phoneNumber' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].phoneNumber + "</td><td data-name='email' class='email' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].email + "</td></tr>");
+				 $('#employee_grid').append("<tr><td>" + response[i].cID + "</td><td data-name='cFName' class='cFName' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].cFName + "</td><td data-name='cLName' class='cLName' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].cLName + "</td><td data-name='phoneNumber' class='phoneNumber' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].phoneNumber + "</td><td data-name='email' class='email' data-type='text' data-pk='"+response[i].cID+"'>" + response[i].email + "</td></tr>");
 			 }
 		  },
 		 error: function(jqXHR, textStatus, errorThrown) {
@@ -139,6 +153,7 @@ $( document ).ready(function() {
 	getShoppingCart();
 
 	make_editable_col('#employee_grid','td.cFName','response.php?action=edit','Customer First Name');
+	make_editable_col('#employee_grid','td.cLName','response.php?action=edit','Last Name');
 	make_editable_col('#employee_grid','td.email','response.php?action=edit','Email');
 	make_editable_col('#employee_grid','td.phoneNumber','response.php?action=edit','Phone Number');
 
@@ -157,4 +172,91 @@ $( document ).ready(function() {
 		});
 	}
 });
+
+const newRecordForm = `<div class="row">
+	<div class="col-sm-12 col-sm-offset-0">
+    <form role="form" id="newDataForm" data-toggle="validator" class="shake">
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="cFName" class="h4">First name</label>
+                <input type="text" class="form-control" id="cFName" placeholder="Enter first name" required>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="cLName" class="h4">Last name</label>
+                <input type="cLName" class="form-control" id="cLName" placeholder="Enter last name" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="phoneNumber" class="h4">Phone</label>
+                <input type="text" class="form-control" id="phoneNumber" placeholder="Enter phone" required>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="email" class="h4">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="userName" class="h4">User name</label>
+                <input type="text" class="form-control" id="userName" placeholder="Enter user name" required>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="password" class="h4">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+    </form>
+	</div>
+</div>`
+
+function submitNewData(dialog) {
+	const inputs = $('#newDataForm').find('.form-control');
+	const outputs = inputs.map((index, item)=>({ name: item.getAttribute('id'), value: item.value })).toArray();
+
+	$.ajax({
+	  type: "POST",
+	  url: "response.php?action=add",
+	  data: { data: outputs },
+	  dataType: "json",
+		success: function(response)
+		{
+			dialog.close();
+      BootstrapDialog.show({
+          title: 'Status',
+          message: 'Successfully'
+      });
+		},
+		 error: function(jqXHR, textStatus, errorThrown) {
+			 alert("loading error data " + errorThrown);
+		 }
+	});
+}
+
+function addNewRecord() {
+  BootstrapDialog.show({
+		size: BootstrapDialog.SIZE_LARGE,
+    title: 'New Record',
+    message: newRecordForm,
+    buttons: [{
+      label: 'Sumbit',
+			cssClass: 'btn-success',
+      action: function(dialog) {
+				submitNewData(dialog);
+      }
+    }, {
+      label: 'Close',
+			cssClass: 'btn-warning',
+      action: function(dialog) {
+        dialog.close();
+      }
+    }]
+  });
+}
 </script>
